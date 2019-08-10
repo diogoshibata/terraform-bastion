@@ -27,8 +27,8 @@ Menu --> Identity --> Compartments<br>
 
 Access:<br>
 Menu --> Administration --> Tenancy Details<br>
-<u>Get your Tenancy OCID</u>
-<u>Get your Home Region</u>
+<u>Get your Tenancy Name</u><br>
+<u>Get your Tenancy OCID</u><br>
 <u>Get your Object Storage Namespace</u>
 
 Access:<br>
@@ -93,6 +93,11 @@ Access:<br>
 <u>Update your file "terraform/userdata/config"</u>
 
 
+<h2>Configuring Wercker and creating Pipelines</h2>
+
+Access: https://www.manula.com/manuals/hoshikawa-cristiano/devops-containers?v=1&l=pt
+
+
 <h2>Bastion VM</h2>
 
 Access the "vm-bastion":<br>
@@ -123,6 +128,8 @@ Commands:<br>
 	oci setup repair-file-permissions --file ~/.oci/oci_api_key.pem<br>
 	oci setup repair-file-permissions --file ~/.oci/config<br>
 	<u>Use Access Kubeconfig information</u><br>
+    cat ~/.kube/config | grep server | cut -f 2- -d ":" | tr -d " "<br>
+    cat ~/.kube/config | grep token<br>
     kubectl version<br>
 	kubectl get nodes<br>
 	kubectl get pods<br>
@@ -130,7 +137,4 @@ Commands:<br>
 	//get the token needed to connect to Kubernetes dashboard<br>
 	cat ~/.kube/config | grep token<br>
 	//initiate the proxy to connect to Kubernetes dashboard<br>
-	kubectl proxy<br><br>
-    <i>Ctrl + c</i><br><br>
-
-    
+	kubectl proxy  
