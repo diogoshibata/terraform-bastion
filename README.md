@@ -116,7 +116,7 @@ Access the "vm-bastion":<br>
 
 Commands:<br>
 	sudo su
-	git clone '<i>your git repository</i>'<br>
+	git clone https://github.com/'<i>your git repository</i>'/terraform-bastion<br>
 	mkdir -p ~/.oci<br>
 	cp terraform-oke/ssh-keys/oci_api_key.pem ~/.oci/oci_api_key.pem<br>
 	cp terraform-oke/terraform/userdata/config ~/.oci/config<br>
