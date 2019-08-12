@@ -1,4 +1,4 @@
-# OKE and Bastion Host with Resource Manager in Oracle Cloud
+# Oracle Conetainer Engine for Kubernetes (OKE) and Bastion Host with Resource Manager in Oracle Cloud
 
 This tutorial is made to create a OKE Cluster (Oracle Container Engine for Kubernetes) and a Bastion Host to manage it.
 
@@ -19,7 +19,7 @@ All here is made to make [this Cloud Native Workshop](https://oracle.github.io/l
 * [Oracle Cloud Infrastructure Registry (OCIR)](https://docs.cloud.oracle.com/iaas/Content/Registry/Concepts/registryoverview.htm) to store and share container images
 * [Wercker](https://app.wercker.com/) to manage our container pipelines
 
-/*
+//
 <h2>Cloud Console</h2>
 
 <h3>Get the needed information of your account and create the neede logical resources</h3>
@@ -144,8 +144,8 @@ Commands:<br>
 	sudo su
 	git clone https://github.com/'<i>your git repository</i>'/terraform-bastion<br>
 	mkdir -p ~/.oci<br>
-	cp terraform-oke/ssh-keys/oci_api_key.pem ~/.oci/oci_api_key.pem<br>
-	cp terraform-oke/terraform/userdata/config ~/.oci/config<br>
+	cp terraform-bastion/ssh-keys/oci_api_key.pem ~/.oci/oci_api_key.pem<br>
+	cp terraform-bastion/terraform/userdata/config ~/.oci/config<br>
 	oci setup repair-file-permissions --file ~/.oci/oci_api_key.pem<br>
 	oci setup repair-file-permissions --file ~/.oci/config<br>
 	<u>Use Access Kubeconfig information</u><br>
@@ -159,4 +159,4 @@ Commands:<br>
 	cat ~/.kube/config | grep token<br>
 	//initiate the proxy to connect to Kubernetes dashboard<br>
 	kubectl proxy
-*/
+//
