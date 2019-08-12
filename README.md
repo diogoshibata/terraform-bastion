@@ -1,4 +1,25 @@
-# terraform-oke
+# OKE and Bastion Host with Resource Manager in Oracle Cloud
+
+This tutorial is made to create a OKE Cluster (Oracle Container Engine for Kubernetes) and a Bastion Host to manage it.
+
+All here is made to make [this Cloud Native Workshop](https://oracle.github.io/learning-library/workshops/container-native-development/?version=Virtual+Box&page=LabGuide100.md) easier and replace the following steps:
+* Lab 200: Install and Configure Virtual Box
+* Lab 200: Provision Kubernetes Using Terraform: Set Up Oracle Cloud infrastructure
+* Lab 200: Provision Kubernetes Using Terraform: Provision Kubernetes Using Terraform
+
+## Prerequisites
+* Oracle Cloud Account (can be a simple trial account)
+* GitHub Account
+* Wercker Account
+
+## What we will use
+* Oracle Cloud Console
+* [Terraform Configuration Language for Oracle Cloud](https://www.terraform.io/docs/providers/oci/index.html) to be used with [Resource Manager](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm) and provisio our Bastion Host
+* [Oracle Container Engine for Kubernetes (OKE)](https://docs.cloud.oracle.com/iaas/Content/ContEng/Concepts/contengoverview.htm) 
+* [Oracle Cloud Infrastructure Registry (OCIR)](https://docs.cloud.oracle.com/iaas/Content/Registry/Concepts/registryoverview.htm) to store and share container images
+* [Wercker](https://app.wercker.com/) to manage our container pipelines
+
+/*
 <h2>Cloud Console</h2>
 
 <h3>Get the needed information of your account and create the neede logical resources</h3>
@@ -137,4 +158,5 @@ Commands:<br>
 	//get the token needed to connect to Kubernetes dashboard<br>
 	cat ~/.kube/config | grep token<br>
 	//initiate the proxy to connect to Kubernetes dashboard<br>
-	kubectl proxy  
+	kubectl proxy
+*/
