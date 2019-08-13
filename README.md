@@ -2,7 +2,7 @@
 
 This tutorial is made to create a OKE Cluster (Oracle Container Engine for Kubernetes) and a Bastion Host to manage it.
 
-All here is made to make [this Cloud Native Workshop](https://oracle.github.io/learning-library/workshops/container-native-development/?version=Virtual+Box&page=LabGuide100.md) easier and replace the following steps:
+All here was made to make [this Cloud Native Workshop](https://oracle.github.io/learning-library/workshops/container-native-development/?version=Virtual+Box&page=LabGuide100.md) easier and replace the following steps:
 * Lab 200: Install and Configure Virtual Box
 * Lab 200: Provision Kubernetes Using Terraform: Set Up Oracle Cloud Infrastructure
 * Lab 200: Provision Kubernetes Using Terraform: Provision Kubernetes Using Terraform
