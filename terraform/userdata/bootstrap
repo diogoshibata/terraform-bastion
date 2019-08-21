@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/bin/bash
 echo '########## yum update all ###############'
 sudo yum update -y
@@ -11,18 +10,3 @@ sudo systemctl enable docker.service
 sudo systemctl start ocid.service
 sudo systemctl start docker.service
 sudo systemctl status ocid.service
-=======
-#!/bin/bash
-echo '########## yum update all ###############'
-sudo yum update -y
-
-echo '########## install oci-cli and kubectl ##############'
-sudo yum install python-oci-cli kubectl git docker-engine  -y
-
-sudo systemctl enable ocid.service
-sudo systemctl enable docker.service
-sudo systemctl start ocid.service
-sudo systemctl start docker.service
-sudo systemctl status ocid.service
->>>>>>> f03bef2fa1ef4d57575b4709ea47bcc289b86c98
-sudo systemctl status docker.service

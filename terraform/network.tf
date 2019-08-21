@@ -1,6 +1,6 @@
 /* Network */
 data "oci_identity_availability_domains" "availability_domains" {
-  compartment_id = "${var.compartment_ocid}"
+  compartment_id = "${oci_identity_compartment.oke_compartment.id}"
 }
 
 ############################################
@@ -19,7 +19,7 @@ locals {
 
 resource "oci_core_vcn" "vcn-workshop" {
   cidr_block = "${var.vcn_cidr}"
-  compartment_id = "${var.compartment_ocid}"
+  compartment_id = "${oci_identity_compartment.oke_compartment.id}"
   dns_label = "vcnworkshop"
 }
 
@@ -28,7 +28,7 @@ resource "oci_core_vcn" "vcn-workshop" {
 ############################################
 
 resource "oci_core_internet_gateway" "ig-workshop" {
-  compartment_id = "${var.compartment_ocid}"
+  compartment_id = "${oci_core_vcn.vcn-workshop.compartment_id}"
   vcn_id = "${oci_core_vcn.vcn-workshop.id}"
 }
 
@@ -37,7 +37,7 @@ resource "oci_core_internet_gateway" "ig-workshop" {
 ############################################
 
 resource "oci_core_route_table" "routetable" {
-  compartment_id = "${var.compartment_ocid}"
+  compartment_id = "${oci_core_vcn.vcn-workshop.compartment_id}"
   vcn_id = "${oci_core_vcn.vcn-workshop.id}"
   display_name = "Bastion Route Table"
 
@@ -87,7 +87,7 @@ resource "oci_core_subnet" "sub01" {
   cidr_block = "${var.sub_01}"
   dns_label = "sub01"
   security_list_ids = ["${oci_core_security_list.securitylist.id}"]
-  compartment_id = "${var.compartment_ocid}"
+  compartment_id = "${oci_core_vcn.vcn-workshop.compartment_id}"
   vcn_id = "${oci_core_vcn.vcn-workshop.id}"
   route_table_id = "${oci_core_route_table.routetable.id}"
   dhcp_options_id = "${oci_core_vcn.vcn-workshop.default_dhcp_options_id}"

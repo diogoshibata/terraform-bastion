@@ -1,12 +1,24 @@
 variable "region" {}
 
+variable "tenancy_ocid" {}
+
 variable "compartment_ocid" {}
 
-variable "bootstrap_file" {
-  default = "./userdata/bootstrap"
+#It's not a best practice to have de User OCID as a variable - Workshop use only
+variable "user_id" {
+  description = "Your User OCID"
 }
 
+/*
+#The commands were placed at a remote-exec resource instead
+variable "bootstrap_file" {
+  description = "Bootstrap to run on instance after provisioning"
+  default = "./userdata/bootstrap"
+}
+*/
+
 variable "instance_image_ocid" {
+  description = "Addresses to map Oracle Linux Image 7.x"
   type = "map"
   default = {
     // Oracle-provided image "Oracle-Linux-7.x"
@@ -26,7 +38,7 @@ variable "instance_image_ocid" {
 }
 
 variable "instance_shape" {
-  description = "The shape of the compute instance"
+  description = "The shape of the Bastion Host compute instance"
   default = "VM.Standard2.2"
 }
 
@@ -35,13 +47,27 @@ variable "availability_domains" {
 }
 
 variable "vcn_cidr" {
+  description = "Virtual Cloud Network (VLAN): 192.168.0.0 - 192.168.255.255"
   default = "192.168.0.0/16"
 }
 
 variable "sub_01" {
+  description = "Subnet for our Bastion Host: 192.168.1.0 - 192.168.1.255"
   default = "192.168.1.0/24"
 }
 
-variable ssh_public_key {
+variable "ssh_public_key_pub" {
+  description = "Public PUB Key to use in Bastion Host compute instance"
   default = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHX7WQWmFGqyO8RLktNUFfaAnyP1+Nlf7wAeclf6m+3H7JHygpGLIuuQw7GXMHH86/IwkxbO62TcLPTr99wO/h8WnreiILWr+v5vmoMKq0BcSPt57Qclpdq2KbhivYaBfoM4TK1tyMSsqnXbmtlhBbdPpz6MXkSLhsiZHKaxT1435ZwW5l4poC481d1/XI7iikEno7rvvTRyL4vC7xoqkWeNexEVb2uDD4zkYxgoobMjFdk9M4TDSxbkoTMb9SbLbR+980Dte2ccgaduN7JsZWIqjDMlkjDOqnN4NxR5zpGaOVnqDD7F6naB4N26SCC8pbl9X2SL5/VDaqYuCTCO8j imported-openssh-key"
+}
+
+variable "ssh_public_key_pem_path" {
+  description = "Public PEM Key path to use for user login in tenancy"
+  default = "./ssh-keys/oci_api_key_public.pem"
+}
+
+variable "oke_policy" {
+  description = "The policy that allows OKE to manage resources in the environment"
+  type = "list"
+  default = ["allow service OKE to manage all-resources in tenancy"]
 }
