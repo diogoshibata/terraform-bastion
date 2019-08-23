@@ -33,8 +33,8 @@ The labs from 040 to 070 will walk you through the creation of all the resources
 >In this workshop, creating resources manually is a more secure way to work, since we made here some simplifications that expose security informations that must not be shared or exposed. At the end of the Lab 050, there is a Terraform configuration zip file that does not expose the security information managed at the Lab 050. If you use this fil, you can jump directly to the Lab 100 after the completion of Lab 050.
 
 * *[Lab 040](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20040/lab040.md): Understanding the OCI concepts.*
-* *[Lab 050](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20040/lab050.md): Accessing the Tenancy and configuring the IAM (and other accounts).*
-* *[Lab 060](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20040/lab060.md): Creating and configuring the cloud infrastructure resources (except Bastion Host VM).*
-* *[Lab 070](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20040/lab070.md): Creating, accessing and configuring the Bastion Host VM.*
-* [Lab 100](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20040/lab100.md): Using the Resource Manager to create infrastructure resources and configure Bastion Host VM.
-* [Lab 200](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20040/lab200.md): Creating and managing the Oracle Container Engine for Kubernetes (OKE) cluster.
+* *[Lab 050](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20050/lab050.md): Accessing the Tenancy and configuring the IAM (and other accounts).*
+* *[Lab 060](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20060/lab060.md): Creating and configuring the cloud infrastructure resources (except Bastion Host VM).*
+* *[Lab 070](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20070/lab070.md): Creating, accessing and configuring the Bastion Host VM.*
+* [Lab 100](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20100/lab100.md): Using the Resource Manager to create infrastructure resources and configure Bastion Host VM.
+* [Lab 200](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20200/lab200.md): Creating and managing the Oracle Container Engine for Kubernetes (OKE) cluster.
