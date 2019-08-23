@@ -31,7 +31,7 @@ The localhost connection will be made trough a SSH tunnel with the Bastion Host 
 *In this workshop, creating resources manually is a more secure way to work, since we made here some simplifications that expose security informations that must not be shared or exposed. At the end of the Lab 050, there is a Terraform configuration zip file that does not expose the security information managed at the Lab 050. If you use this fil, you can jump directly to the Lab 100 after the completion of Lab 050.*
 
 * *Lab 040: Understanding the OCI concepts.*
-* *Lab 050: Accessing the Tenancy and configuring the IAM.*
+* *Lab 050: Accessing the Tenancy and configuring the IAM (and other accounts).*
 * *Lab 060: Creating and configuring the cloud infrastructure resources (except Bastion Host VM).*
 * *Lab 070: Creating, accessing and configuring the Bastion Host VM.*
 * Lab 100: Using the Resource Manager to create infrastructure resources and configure Bastion Host VM.
