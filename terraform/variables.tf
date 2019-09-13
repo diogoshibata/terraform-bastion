@@ -46,7 +46,7 @@ variable "instance_shape" {
 }
 
 variable "availability_domains" {
-  default = "3"
+  default = "1"
 }
 
 variable "vcn_cidr" {
