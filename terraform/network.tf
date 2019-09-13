@@ -18,6 +18,7 @@ locals {
 ############################################
 
 resource "oci_core_vcn" "vcn-workshop" {
+  display_name = "vcn-workshop"
   cidr_block = "${var.vcn_cidr}"
   compartment_id = "${oci_identity_compartment.oke_compartment.id}"
   dns_label = "vcnworkshop"
@@ -83,7 +84,6 @@ resource "oci_core_security_list" "securitylist" {
 ############################################
 resource "oci_core_subnet" "sub01" {
   display_name = "sub01"
-//  availability_domain = "${lookup(data.oci_identity_availability_domains.availability_domains.availability_domains[var.availability_domains -2],"name")}"
   cidr_block = "${var.sub_01}"
   dns_label = "sub01"
   security_list_ids = ["${oci_core_security_list.securitylist.id}"]
