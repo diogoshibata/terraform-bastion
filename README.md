@@ -28,9 +28,13 @@ The localhost connection will be made trough a SSH tunnel with the Bastion Host 
 
 The labs from 040 to 070 will walk you through the creation of all the resources managed by the Resource Manager in the Hands-On Lab. So, if you want to provision a standardized Oracle Cloud Infrastructure without publish security information in logs or other files, follow the labs from 040 to 070.
 
+>
 >**ATTENTION**
 >
->In this workshop, creating resources manually is a more secure way to work, since we made here some simplifications that expose security informations that must not be shared or exposed. At the end of the Lab 050, there is a Terraform configuration zip file that does not expose the security information managed at the Lab 050. If you use this fil, you can jump directly to the Lab 100 after the completion of Lab 050.
+>In this workshop, creating resources manually is a more secure way to work, since we made here some simplifications that expose security information that must not be shared or exposed.
+>
+
+[comment]: # At the end of the Lab 050, there is a Terraform configuration zip file that does not expose the security information managed at the Lab 050. If you use this file, you can jump directly to the Lab 100 after the completion of Lab 050.
 
 * *[Lab 040](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20040/lab040.md): Understanding the OCI concepts.*
 * *[Lab 050](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20050/lab050.md): Accessing the Tenancy and configuring the IAM (and other accounts).*
