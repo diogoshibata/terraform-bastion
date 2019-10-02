@@ -8,7 +8,9 @@ All here was made to make [this Cloud Native Workshop](https://oracle.github.io/
 * Lab 200: Provision Kubernetes Using Terraform: Set Up Oracle Cloud Infrastructure
 * Lab 200: Provision Kubernetes Using Terraform: Provision Kubernetes Using Terraform
 
-The localhost connection will be made trough a SSH tunnel with the Bastion Host forwarding the remote 8001 port to localhost.
+The localhost connection will be made trough a SSH tunnel with the Bastion Host VM forwarding the remote 8001 port to localhost.
+
+We will fork the [https://github.com/derekoneil/twitter-feed-oke] repository to deploy it to our Kubernetes cluster.
 
 ## Prerequisites
 
@@ -42,3 +44,4 @@ The labs from 040 to 070 will walk you through the creation of all the resources
 * *[Lab 070](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20070/lab070.md): Creating, accessing and configuring the Bastion Host VM.*
 * [Lab 100](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20100/lab100.md): Using the Resource Manager to create infrastructure resources and configure Bastion Host VM.
 * [Lab 200](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20200/lab200.md): Creating and managing the Oracle Container Engine for Kubernetes (OKE) cluster.
+* [Lab 300](https://github.com/diogoshibata/terraform-bastion/blob/master/Lab%20300/lab300.md): Final Labs and Files.
