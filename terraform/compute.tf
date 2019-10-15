@@ -37,7 +37,7 @@ resource "null_resource" "remote-exec" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo yum update -y",
+      //"sudo yum update -y",
       "sudo yum install python-oci-cli kubectl git -y",
       "sudo systemctl enable ocid.service",
       "sudo systemctl start ocid.service",
