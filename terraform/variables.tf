@@ -18,25 +18,25 @@ variable "bootstrap_file" {
 */
 
 variable "instance_image_ocid" {
-  description = "Addresses to map Oracle Linux Image 7.x"
+  description = "Addresses to map Oracle Linux Image 7.7"
   type = "map"
   default = {
-    // Oracle-provided image "Oracle-Linux-7.x"
+    // Oracle-provided image "Oracle-Linux-7.7"
     // See https://docs.us-phoenix-1.oraclecloud.com/images/
-    // https://docs.cloud.oracle.com/iaas/images/image/7d31cb1d-f31f-450c-95c4-0539776c3dcf/
-    ap-mumbai-1="ocid1.image.oc1.ap-mumbai-1.aaaaaaaanqnm77gq2dpmc2aih2ddlwlahuv2qwmokufb7zbi52v67pzkzycq"
-    ap-seoul-1="ocid1.image.oc1.ap-seoul-1.aaaaaaaav3lc5w7cvz5yr6hpjdubxupjeduzd5xvaroyhjg6vwqzsdvgus6q"
-    ap-sydney-1="ocid1.image.oc1.ap-sydney-1.aaaaaaaagtfumjxhosxrkgfci3dgwvsmp35ip5nbhy2rypxfh3rwtqsozkcq"
-    ap-tokyo-1="ocid1.image.oc1.ap-tokyo-1.aaaaaaaajousbvplzyrh727e3d4sb6bam5d2fomwhbtzatoun5sqcuvvfjnq"
-    ca-toronto-1="ocid1.image.oc1.ca-toronto-1.aaaaaaaavr35ze44lkflxffkhmt4xyamkfjpbjhsm5awxjwlnp3gpx7h7fgq"
-    eu-frankfurt-1="ocid1.image.oc1.eu-frankfurt-1.aaaaaaaa7gj6uot6tz6t34qjzvkldxtwse7gr5m7xvnh6xfm53ddxp3w37ja"
-    eu-zurich-1="ocid1.image.oc1.eu-zurich-1.aaaaaaaasl3mlhvgzhfglqqkwdbppmmgomkz6iyi42wjkceldqcpecg7jzgq"
-    sa-saopaulo-1="ocid1.image.oc1.sa-saopaulo-1.aaaaaaaawamujpmwxbjgrfeb66zpew5sgz4bimzb4wgcwhqdjyct53bucvoq"
-    uk-london-1="ocid1.image.oc1.uk-london-1.aaaaaaaa6trfxqtp5ib7yfgj725js3o6agntmv6vckarebsmacrhdxqojeya"
-    us-ashburn-1="ocid1.image.oc1.iad.aaaaaaaayuihpsm2nfkxztdkottbjtfjqhgod7hfuirt2rqlewxrmdlgg75q"
-    us-langley-1="ocid1.image.oc2.us-langley-1.aaaaaaaaazlspcasnl4ibjwu7g5ukiaqjp6xcbk5lqgtdsazd7v6evbkwxcq"
-    us-luke-1="ocid1.image.oc2.us-luke-1.aaaaaaaa73qnm5jktrwmkutf6iaigib4msieymk2s5r5iweq5yvqublgcx5q"
-    us-phoenix-1="ocid1.image.oc1.phx.aaaaaaaadtmpmfm77czi5ghi5zh7uvkguu6dsecsg7kuo3eigc5663und4za"
+    // https://docs.cloud.oracle.com/iaas/images/image/554b84a7-9b76-424d-89ef-15ea591c5eef/
+    ap-mumbai-1="ocid1.image.oc1.ap-mumbai-1.aaaaaaaaefcax7pqzhgcpiaxomtzvwj67cssuxhazggbhoxjv4adcvsfkfga"
+    ap-seoul-1="ocid1.image.oc1.ap-seoul-1.aaaaaaaaxabo4p5asejscj4ba4weg62owtivojokmtcjyr6eqrdeq4dgfzvq"
+    ap-sydney-1="ocid1.image.oc1.ap-sydney-1.aaaaaaaahggevnzn2hs3abhwacvv5jxnguoxdej3bnuy5t4cy3jrslubgqoa"
+    ap-tokyo-1="ocid1.image.oc1.ap-tokyo-1.aaaaaaaatbwoj3ee5sbaa6u5ptpy74bukkqmj75bptvn7dpezovpdvr6ds2q"
+    ca-toronto-1="ocid1.image.oc1.ca-toronto-1.aaaaaaaanljihk7bncal55wmgk5yrt23kpongv733zx5w5k4h46qs4srgqua"
+    eu-frankfurt-1="ocid1.image.oc1.eu-frankfurt-1.aaaaaaaajqghpxnszpnghz3um66jywaw5q3pudfw5qwwkyu24ef7lcsyjhsq"
+    eu-zurich-1="ocid1.image.oc1.eu-zurich-1.aaaaaaaakla6mguktwqu7hmv75p7haiharf4usbpvjeogl7pnk3tbyqmawbq"
+    sa-saopaulo-1="ocid1.image.oc1.sa-saopaulo-1.aaaaaaaaj6eqq3vky7mwktyewgylrvn7dhaqno6ypd6lt3yj7qigrfe7a4ca"
+    uk-london-1="ocid1.image.oc1.uk-london-1.aaaaaaaaf4nj5yoqo7gv6ht6t7gtcr5de5slhy52alv3nqyjvmmh25knbama"
+    us-ashburn-1="ocid1.image.oc1.iad.aaaaaaaa3onyerinivkpiqektrd3idoeo72fuz56cpz6rihkvqulmoux5qkq"
+    us-langley-1="ocid1.image.oc2.us-langley-1.aaaaaaaawq36twtmxcxklpcqczltp7ckuy3aj7e6wkfkweq4xacfdelytgfa"
+    us-luke-1="ocid1.image.oc2.us-luke-1.aaaaaaaabrxehwss7yrocavvaa5qcximxr2vkyrsuloq5ctnzxdhcvmdo2ga"
+    us-phoenix-1="ocid1.image.oc1.phx.aaaaaaaalza4xew5okvv42djc3bphidkf7pa7xy435uieguz4aau735flbmq"
   }
 }
 
