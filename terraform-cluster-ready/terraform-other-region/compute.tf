@@ -6,7 +6,7 @@ resource "tls_private_key" "public_private_key_pair" {
 resource "oci_core_instance" "bastion" {
   //availability_domain = "${lookup(data.oci_identity_availability_domains.availability_domains.availability_domains[var.availability_domains -2],"name")}"
   availability_domain = "${lookup(data.oci_identity_availability_domains.availability_domains.availability_domains[0],"name")}"
-  compartment_id = "${var.oke_compartment_id}"
+  compartment_id = "${var.compartment_ocid}"
   display_name = "vm-bastion"
   shape = "${var.instance_shape}"
   subnet_id = "${oci_core_subnet.sub01.id}"

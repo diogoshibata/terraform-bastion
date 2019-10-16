@@ -1,6 +1,6 @@
 /* Network */
 data "oci_identity_availability_domains" "availability_domains" {
-  compartment_id = "${var.oke_compartment_id}"
+  compartment_id = "${var.compartment_ocid}"
 }
 
 ############################################
@@ -20,7 +20,7 @@ locals {
 resource "oci_core_vcn" "vcn-workshop" {
   display_name = "vcn-workshop"
   cidr_block = "${var.vcn_cidr}"
-  compartment_id = "${var.oke_compartment_id}"
+  compartment_id = "${var.compartment_ocid}"
   dns_label = "vcnworkshop"
 }
 
