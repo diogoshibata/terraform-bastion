@@ -69,6 +69,10 @@ variable "ssh_public_key_pem_path" {
   default = "./ssh-keys/oci_api_key_public.pem"
 }
 
+variable "oke_compartment_id" {
+  description = "Paste your OKE-Workshop Compartment OCID"
+}
+
 variable "oke_cluster_ocid" {
   description = "Paste your OKE Cluster OCID"
 }

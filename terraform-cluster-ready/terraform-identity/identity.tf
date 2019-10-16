@@ -5,6 +5,12 @@ resource "oci_identity_policy" "allow_oke_policy" {
     statements = "${var.oke_policy}"
 }
 
+resource "oci_identity_compartment" "oke_compartment" {
+    compartment_id = "${var.tenancy_ocid}"
+    description = "Workshop Compartment"
+    name = "OKE-Workshop"
+}
+
 #Public PEM Key used for Workshop
 resource "oci_identity_api_key" "oci_api_key_public" {
     //key_value = "${file(./ssh-keys/oci_api_key_public.pem)}"
