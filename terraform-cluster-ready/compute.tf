@@ -38,7 +38,7 @@ resource "null_resource" "remote-exec" {
   provisioner "remote-exec" {
     inline = [
       //"sudo yum update -y",
-      "sudo yum install python-oci-cli kubectl git -y",
+      "sudo yum install python-oci-cli kubectl -y",
       "sudo systemctl enable ocid.service",
       "sudo systemctl start ocid.service",
       "sudo systemctl status ocid.service",
@@ -71,9 +71,10 @@ resource "null_resource" "remote-exec" {
   provisioner "remote-exec" {
     inline = [
       "oci -v",
+      "oci setup repair-file-permissions --file ~/.oci/config",
       "oci setup repair-file-permissions --file ~/.oci/oci_api_key.pem",
       "mkdir -p ~/.kube",
-      "oci ce cluster create-kubeconfig --cluster-id ${var.oke_cluster_ocid} --file ~/.kube/config --region us-ashburn-1 --token-version 1.0.0",
+      "oci ce cluster create-kubeconfig --cluster-id ${var.oke_cluster_ocid} --file ~/.kube/config --region ${var.region} --token-version 1.0.0",
       "cat ~/.kube/config | grep token",
       "cat ~/.kube/config | grep server"
     ]
